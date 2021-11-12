@@ -124,7 +124,6 @@ gen_gtkmm/
 │   └── write_template.py
 └── run/
     └── gen_gtkmm_run.py
-
 ```
 
 ### Docs
