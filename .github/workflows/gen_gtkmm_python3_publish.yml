@@ -2,8 +2,20 @@ name: Install Python3 Package gen_gtkmm
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'gen_gtkmm/**'
+      - 'MANIFEST.in'
+      - 'pyproject.toml'
+      - 'setup.cfg'
+      - 'setup.py'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'gen_gtkmm/**'
+      - 'MANIFEST.in'
+      - 'pyproject.toml'
+      - 'setup.cfg'
+      - 'setup.py'
 jobs:
   deploy:
     runs-on: ubuntu-latest

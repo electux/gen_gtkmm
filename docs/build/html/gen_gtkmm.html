@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>gen_gtkmm package &mdash; gen_gtkmm https://github.com/electux/gen_gtkmm/releases/ documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -39,7 +40,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">GTK– project skeleton generator</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">gen_gtkmm</a><ul class="current">
@@ -80,9 +81,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="gen-gtkmm-package">
+  <section id="gen-gtkmm-package">
 <h1>gen_gtkmm package<a class="headerlink" href="#gen-gtkmm-package" title="Permalink to this headline"></a></h1>
-<div class="section" id="subpackages">
+<section id="subpackages">
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
@@ -105,8 +106,8 @@
 </li>
 </ul>
 </div>
-</div>
-<div class="section" id="module-gen_gtkmm">
+</section>
+<section id="module-gen_gtkmm">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-gen_gtkmm" title="Permalink to this headline"></a></h2>
 <dl class="simple">
 <dt>Module</dt><dd><p>__init__.py</p>
@@ -129,7 +130,7 @@ Load a base info, create an CLI interface and run operation(s).</p>
 </dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="gen_gtkmm.GenGtkMM">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gen_gtkmm.</span></span><span class="sig-name descname"><span class="pre">GenGtkMM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gen_gtkmm.html#GenGtkMM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gen_gtkmm.GenGtkMM" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gen_gtkmm.</span></span><span class="sig-name descname"><span class="pre">GenGtkMM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gen_gtkmm.html#GenGtkMM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gen_gtkmm.GenGtkMM" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ats_utilities.cli.cfg_cli.CfgCLI</span></code></p>
 <p>Defined class GenGtkMM with attribute(s) and method(s).
 Load a base info, create an CLI interface and run operation(s).
@@ -141,6 +142,7 @@ It defines:</p>
 <div class="line">GEN_VERBOSE - console text indicator for process-phase.</div>
 <div class="line">CONFIG - tool info file path.</div>
 <div class="line">LOG - tool log file path.</div>
+<div class="line">LOGO - logo for splash screen.</div>
 <div class="line">OPS - list of tool options.</div>
 <div class="line">logger - logger object API.</div>
 </div>
@@ -156,27 +158,32 @@ It defines:</p>
 </div></blockquote>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gen_gtkmm.GenGtkMM.CONFIG">
-<span class="sig-name descname"><span class="pre">CONFIG</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'/conf/gen_gtkmm.cfg'</span></em><a class="headerlink" href="#gen_gtkmm.GenGtkMM.CONFIG" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">CONFIG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/conf/gen_gtkmm.cfg'</span></em><a class="headerlink" href="#gen_gtkmm.GenGtkMM.CONFIG" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gen_gtkmm.GenGtkMM.GEN_VERBOSE">
-<span class="sig-name descname"><span class="pre">GEN_VERBOSE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'GEN_GTKMM'</span></em><a class="headerlink" href="#gen_gtkmm.GenGtkMM.GEN_VERBOSE" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GEN_VERBOSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GEN_GTKMM'</span></em><a class="headerlink" href="#gen_gtkmm.GenGtkMM.GEN_VERBOSE" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gen_gtkmm.GenGtkMM.LOG">
-<span class="sig-name descname"><span class="pre">LOG</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'/log/gen_gtkmm.log'</span></em><a class="headerlink" href="#gen_gtkmm.GenGtkMM.LOG" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">LOG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/log/gen_gtkmm.log'</span></em><a class="headerlink" href="#gen_gtkmm.GenGtkMM.LOG" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gen_gtkmm.GenGtkMM.LOGO">
+<span class="sig-name descname"><span class="pre">LOGO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/conf/gen_gtkmm.logo'</span></em><a class="headerlink" href="#gen_gtkmm.GenGtkMM.LOGO" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gen_gtkmm.GenGtkMM.OPS">
-<span class="sig-name descname"><span class="pre">OPS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">['-g',</span> <span class="pre">'--gen',</span> <span class="pre">'-v',</span> <span class="pre">'--verbose',</span> <span class="pre">'--version']</span></em><a class="headerlink" href="#gen_gtkmm.GenGtkMM.OPS" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">OPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['-g',</span> <span class="pre">'--gen',</span> <span class="pre">'-v',</span> <span class="pre">'--verbose',</span> <span class="pre">'--version']</span></em><a class="headerlink" href="#gen_gtkmm.GenGtkMM.OPS" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gen_gtkmm.GenGtkMM.VERBOSE">
-<span class="sig-name descname"><span class="pre">VERBOSE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'ATS_UTILITIES'</span></em><a class="headerlink" href="#gen_gtkmm.GenGtkMM.VERBOSE" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">VERBOSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ATS_UTILITIES'</span></em><a class="headerlink" href="#gen_gtkmm.GenGtkMM.VERBOSE" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -201,8 +208,8 @@ It defines:</p>
 
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

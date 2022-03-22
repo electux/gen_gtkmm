@@ -2,8 +2,14 @@ name: gen_gtkmm py checker
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'gen_gtkmm/**'
+      - 'setup.py'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'gen_gtkmm/**'
+      - 'setup.py'
 jobs:
   build:
     runs-on: ubuntu-latest

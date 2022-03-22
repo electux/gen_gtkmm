@@ -115,6 +115,7 @@ setup(
     install_requires=['ats-utilities'],
     package_data = {
         'gen_gtkmm': [
+            'conf/gen_gtkmm.logo',
             'conf/gen_gtkmm.cfg',
             'conf/gen_gtkmm_util.cfg',
             'conf/project.yaml',
