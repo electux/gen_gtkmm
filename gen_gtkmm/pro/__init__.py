@@ -21,9 +21,9 @@
 '''
 
 import sys
+from os.path import dirname, realpath
 
 try:
-    from pathlib import Path
     from gen_gtkmm.pro.config import ProConfig
     from gen_gtkmm.pro.config.pro_name import ProName
     from gen_gtkmm.pro.read_template import ReadTemplate
@@ -95,7 +95,7 @@ class GtkMMSetup(FileChecking, ProConfig, ProName):
         self.__reader = ReadTemplate(verbose=verbose)
         self.__writer = WriteTemplate(verbose=verbose)
         project_structure = '{0}{1}'.format(
-            Path(__file__).parent, GtkMMSetup.PRO_STRUCTURE
+            dirname(realpath(__file__)), GtkMMSetup.PRO_STRUCTURE
         )
         self.check_path(file_path=project_structure, verbose=verbose)
         self.check_mode(file_mode='r', verbose=verbose)

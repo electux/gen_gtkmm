@@ -33,7 +33,7 @@ other information that should be provided before the modules are installed.
 
 ![Install Python2 Package](https://github.com/electux/gen_gtkmm/workflows/Install%20Python2%20Package%20gen_gtkmm/badge.svg?branch=main) ![Install Python3 Package](https://github.com/electux/gen_gtkmm/workflows/Install%20Python3%20Package%20gen_gtkmm/badge.svg?branch=main)
 
-Currently there are three ways to install tool:
+Currently there are three ways to install tool
 * Install process based on pip
 * Install process based on setup.py (setuptools)
 * Install process based on docker mechanism
@@ -54,7 +54,7 @@ pip3 install gen_gtkmm
 
 Navigate to **[release page](https://github.com/electux/gen_gtkmm/releases)** download and extract release archive.
 
-To install modules, locate and run setup.py, type the following:
+To install modules, locate and run setup.py, type the following
 ```
 tar xvzf gen_gtkmm-x.y.z.tar.gz
 cd gen_gtkmm-x.y.z
@@ -84,21 +84,22 @@ You can use Dockerfile to create image/container.
 
 ### Generation flow
 
-Base flow of generation process:
+Base flow of generation process
 
 ![generation flow](https://raw.githubusercontent.com/electux/gen_gtkmm/dev/docs/gen_gtkmm_flow.png)
 
 ### Tool structure
 
-**gen_gtkmm** is based on Template mechanism:
+**gen_gtkmm** is based on Template mechanism
 
 ![structure](https://raw.githubusercontent.com/electux/gen_gtkmm/dev/docs/gen_gtkmm.png)
 
-Generator structure:
+Generator structure
 
 ```
 gen_gtkmm/
 ├── conf/
+│   ├── gen_gtkmm.logo
 │   ├── gen_gtkmm.cfg
 │   ├── gen_gtkmm_util.cfg
 │   ├── project.yaml
@@ -130,7 +131,7 @@ gen_gtkmm/
 
 [![Documentation Status](https://readthedocs.org/projects/gen_gtkmm/badge/?version=latest)](https://gen_gtkmm.readthedocs.io/projects/gen_gtkmm/en/latest/?badge=latest)
 
-More documentation and info at:
+More documentation and info at
 * [gen_gtkmm.readthedocs.io](https://gen_gtkmm.readthedocs.io/en/latest/)
 * [www.gtkmm.org](https://www.gtkmm.org/en/)
 * [www.python.org](https://www.python.org/)
