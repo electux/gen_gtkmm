@@ -104,35 +104,33 @@ You can use Dockerfile to create image/container.
 
 Generator structure
 
-```
-gen_gtkmm/
-├── conf/
-│   ├── gen_gtkmm.logo
-│   ├── gen_gtkmm.cfg
-│   ├── gen_gtkmm_util.cfg
-│   ├── project.yaml
-│   └── template/
-│       ├── ccflags.template
-│       ├── header_module.template
-│       ├── ldflags.template
-│       ├── main_module.template
-│       ├── Makefile.template
-│       ├── objects.template
-│       ├── source_module.template
-│       └── sources.template
-├── __init__.py
-├── log/
-│   └── gen_gtkmm.log
-├── pro/
-│   ├── config/
-│   │   ├── __init__.py
-│   │   ├── pro_name.py
-│   │   └── template_dir.py
-│   ├── __init__.py
-│   ├── read_template.py
-│   └── write_template.py
-└── run/
-    └── gen_gtkmm_run.py
+```bash
+    gen_gtkmm/
+        ├── conf/
+        │   ├── gen_gtkmm.cfg
+        │   ├── gen_gtkmm.logo
+        │   ├── gen_gtkmm_util.cfg
+        │   ├── project.yaml
+        │   └── template/
+        │       ├── ccflags.template
+        │       ├── header_module.template
+        │       ├── ldflags.template
+        │       ├── main_module.template
+        │       ├── Makefile.template
+        │       ├── objects.template
+        │       ├── source_module.template
+        │       └── sources.template
+        ├── __init__.py
+        ├── log/
+        │   └── gen_gtkmm.log
+        ├── pro/
+        │   ├── __init__.py
+        │   ├── read_template.py
+        │   └── write_template.py
+        └── run/
+            └── gen_gtkmm_run.py
+        
+        6 directories, 18 files
 ```
 
 ### Docs
