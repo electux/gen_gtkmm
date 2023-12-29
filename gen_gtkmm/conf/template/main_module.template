@@ -1,4 +1,4 @@
-/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
+/* -*- Mode: CC; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
 /*
  * main.cc
  * Copyright (C) ${YEAR} Vladimir Roncevic <elektron.ronca@gmail.com>
@@ -19,7 +19,7 @@
 #include "${PRO}.h"
 #include <gtkmm/application.h>
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   auto app = Gtk::Application::create(argc, argv, "org.gtkmm.${PRO}");
 

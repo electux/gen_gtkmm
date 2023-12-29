@@ -1,4 +1,4 @@
-/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
+/* -*- Mode: CC; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
 /*
  * ${PRO}.h
  * Copyright (C) ${YEAR} Vladimir Roncevic <elektron.ronca@gmail.com>
@@ -17,8 +17,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef ${PRO_UP}_H
-#define ${PRO_UP}_H
+#pragma once
 
 #include <gtkmm/button.h>
 #include <gtkmm/window.h>
@@ -34,5 +33,3 @@ protected:
   void on_message_button_clicked();
   Gtk::Button message_button;
 };
-
-#endif
