@@ -84,7 +84,7 @@ class GenGtkMM(CfgCLI):
         '''
         current_dir = dirname(realpath(__file__))
         gen_esp_property = {
-            'ats_organization': 'vroncevic',
+            'ats_organization': 'electux',
             'ats_repository': f'{self._GEN_VERBOSE.lower()}',
             'ats_name': f'{self._GEN_VERBOSE.lower()}',
             'ats_logo_path': f'{current_dir}{self._LOGO}',
