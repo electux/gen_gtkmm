@@ -1,14 +1,6 @@
 gen\_gtkmm.pro package
 ======================
 
-Subpackages
------------
-
-.. toctree::
-   :maxdepth: 4
-
-   gen_gtkmm.pro.config
-
 Submodules
 ----------
 
