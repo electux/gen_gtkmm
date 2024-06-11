@@ -1,8 +1,8 @@
 #
 # @brief   new_simple_test
-# @version 1.1.2
-# @date    2023-12-29 23:16:23.092907
-# @company None, free software to use 2023
+# @version 1.1.3
+# @date    2024-06-11 19:14:18.859040
+# @company None, free software to use 2024
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
 

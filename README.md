@@ -1,6 +1,6 @@
-<img align="right" src="https://raw.githubusercontent.com/electux/gen_gtkmm/dev/docs/gen_gtkmm_logo.png" width="25%">
-
 # GTK-- project skeleton generator
+
+<img align="right" src="https://raw.githubusercontent.com/electux/gen_gtkmm/dev/docs/gen_gtkmm_logo.png" width="25%">
 
 **gen_gtkmm** is toolset for generation GTK-- project skeleton for
 developmet of desktop and embedded applications.
@@ -45,7 +45,8 @@ Currently there are three ways to install package
 Python package is located at **[pypi.org](https://pypi.org/project/gen_gtkmm/)**.
 
 You can install by using pip
-```
+
+```bash
 #python3
 pip3 install gen_gtkmm
 ```
@@ -77,8 +78,9 @@ ln -s /usr/local/lib/python3.10/dist-packages/usr/local/bin/gen_gtkmm_run.py /us
 
 Navigate to **[release page](https://github.com/electux/gen_gtkmm/releases)** download and extract release archive.
 
-To install modules, locate and run setup.py, type the following
-```
+To install **gen_gtkmm** locate and run setup.py, type the following
+
+```bash
 tar xvzf gen_gtkmm-x.y.z.tar.gz
 cd gen_gtkmm-x.y.z
 #python3

@@ -29,7 +29,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_gtkmm'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.1.2'
+__version__ = '1.1.3'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -61,7 +61,7 @@ APPROVED_LICENSES: List[str] = [
 PYP_CLASSIFIERS: List[str] = SUPPORTED_PY_VERSIONS + APPROVED_LICENSES
 setup(
     name='gen_gtkmm',
-    version='1.1.2',
+    version='1.1.3',
     description='GTK-- project skeleton generator',
     author='Vladimir Roncevic',
     author_email='elektron.ronca@gmail.com',
@@ -76,6 +76,7 @@ setup(
     install_requires=['ats-utilities'],
     package_data={
         'gen_gtkmm': [
+            'py.typed',
             f'{CONF}/gen_gtkmm.logo',
             f'{CONF}/gen_gtkmm.cfg',
             f'{CONF}/gen_gtkmm_util.cfg',
