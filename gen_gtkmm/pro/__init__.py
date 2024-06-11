@@ -17,7 +17,7 @@ Copyright
     with this program. If not, see <http://www.gnu.org/licenses/>.
 Info
     Defines class GtkMMSetup with attribute(s) and method(s).
-    Generates an GTKMM project structure.
+    Generates a GTKMM project structure.
 '''
 
 import sys
@@ -42,7 +42,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_gtkmm'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.1.2'
+__version__ = '1.1.3'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -51,7 +51,7 @@ __status__ = 'Updated'
 class GtkMMSetup(FileCheck, ProConfig, ProName):
     '''
         Defined class GenESPPro with attribute(s) and method(s).
-        Generates an GTKMM project structure.
+        Generates a GTKMM project structure.
 
         It defines:
 
