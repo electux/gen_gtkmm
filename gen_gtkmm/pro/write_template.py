@@ -21,7 +21,7 @@ Info
 '''
 
 import sys
-from typing import List, Dict
+from typing import List, Optional
 from os import getcwd, chmod, mkdir
 from os.path import exists
 from datetime import datetime
@@ -32,6 +32,7 @@ try:
     from ats_utilities.console_io.verbose import verbose_message
     from ats_utilities.exceptions.ats_type_error import ATSTypeError
     from ats_utilities.exceptions.ats_value_error import ATSValueError
+    from gen_gtkmm.pro.read_template import Templates
 except ImportError as ats_error_message:
     # Force close python ATS ##################################################
     sys.exit(f'\n{__file__}\n{ats_error_message}\n')
@@ -40,7 +41,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_gtkmm'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.1.3'
+__version__ = '1.1.4'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -75,25 +76,25 @@ class WriteTemplate(FileCheck):
 
     def write(
         self,
-        templates: List[Dict[str, str]],
-        pro_name: str | None,
+        templates: Templates,
+        pro_name: Optional[str],
         verbose: bool = False
     ) -> bool:
         '''
             Writes a templates with parameters.
 
             :param templates: List of templates
-            :type templates: <List[Dict[str, str]]>
+            :type templates: <Templates>
             :param pro_name: Project name | None
-            :type pro_name: <str> | <NoneType>
+            :type pro_name: <Optional[str]>
             :param verbose: Enable/Disable verbose option
             :type verbose: <bool>
             :return: True (templates written) | False
             :rtype: <bool>
             :exceptions: ATSTypeError | ATSValueError
         '''
-        error_msg: str | None = None
-        error_id: int | None = None
+        error_msg: Optional[str] = None
+        error_id: Optional[int] = None
         error_msg, error_id = self.check_params([
             ('list:templates', templates), ('str:pro_name', pro_name)
         ])
@@ -107,8 +108,8 @@ class WriteTemplate(FileCheck):
         all_stat: List[bool] = []
         build_dir: str = f'{pro_dir}/build'
         num_of_modules: int = len(templates)
-        module_path: str | None = None
-        module_content: str | None = None
+        module_path: Optional[str] = None
+        module_content: Optional[str] = None
         if not exists(pro_dir):
             mkdir(pro_dir)
             mkdir(build_dir)
