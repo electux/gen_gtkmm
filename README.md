@@ -129,10 +129,11 @@ Generator structure
         │   ├── __init__.py
         │   ├── read_template.py
         │   └── write_template.py
+        ├── py.typed
         └── run/
             └── gen_gtkmm_run.py
-        
-        6 directories, 18 files
+    
+    6 directories, 19 files
 ```
 
 ### Docs

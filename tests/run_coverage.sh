@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # @brief   gen_gtkmm
-# @version v1.1.3
+# @version v1.1.4
 # @date    Sat Aug 11 09:58:41 2021
 # @company None, free software to use 2021
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
