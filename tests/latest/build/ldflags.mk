@@ -1,7 +1,7 @@
 #
 # @brief   latest
-# @version 1.1.4
-# @date    2024-07-03 23:43:03.299016
+# @version 1.1.5
+# @date    2024-07-08 20:11:28.696119
 # @company None, free software to use 2024
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
