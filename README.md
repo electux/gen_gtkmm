@@ -136,6 +136,16 @@ Generator structure
     6 directories, 19 files
 ```
 
+### Code coverage
+
+| Name | Stmts | Miss | Cover |
+|------|-------|------|-------|
+| `gen_gtkmm/__init__.py` | 71 | 12 | 83% |
+| `gen_gtkmm/pro/__init__.py` | 59 | 2 | 97% |
+| `gen_gtkmm/pro/read_template.py` | 54 | 2 | 96% |
+| `gen_gtkmm/pro/write_template.py` | 72 | 4 | 94% |
+| **Total** | 256 | 20 | 92% |
+
 ### Docs
 
 [![Documentation Status](https://readthedocs.org/projects/gen-esp/badge/?version=latest)](https://gen-esp.readthedocs.io/en/latest/?badge=latest)
