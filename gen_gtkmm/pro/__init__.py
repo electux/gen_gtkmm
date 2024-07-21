@@ -42,7 +42,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_gtkmm'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.1.5'
+__version__ = '1.1.6'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -116,13 +116,18 @@ class GtkMMSetup(FileCheck, ProConfig, ProName):
         return self._writer
 
     def gen_pro_setup(
-        self, pro_name: Optional[str], verbose: bool = False
+        self,
+        pro_name: Optional[str],
+        pro_type: Optional[str],
+        verbose: bool = False
     ) -> bool:
         '''
             Generates autoconf project structure.
 
             :param pro_name: Project name | None
             :type pro_name: <Optional[str]>
+            :param pro_type: Project type | None
+            :type pro_type: <Optional[str]>
             :param verbose: Enable/Disable verbose option
             :type verbose: <bool>
             :return: True (success operation) | False
@@ -132,16 +137,18 @@ class GtkMMSetup(FileCheck, ProConfig, ProName):
         error_msg: Optional[str] = None
         error_id: Optional[int] = None
         error_msg, error_id = self.check_params([
-            ('str:pro_name', pro_name)
+            ('str:pro_name', pro_name), ('str:pro_type', pro_type)
         ])
         if error_id == self.TYPE_ERROR:
             raise ATSTypeError(error_msg)
         if not bool(pro_name):
             raise ATSValueError('missing project name')
+        if not bool(pro_type):
+            raise ATSValueError('missing project type')
         status: bool = False
         if bool(self.config) and self._reader and self._writer:
             templates: Templates = self._reader.read(
-                self.config, verbose
+                self.config, pro_type, verbose
             )
             if bool(templates):
                 status = self._writer.write(templates, pro_name, verbose)

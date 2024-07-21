@@ -40,7 +40,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_gtkmm'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.1.5'
+__version__ = '1.1.6'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -81,13 +81,13 @@ class ReadTemplateTestCase(TestCase):
         template = ReadTemplate()
         templates: Dict[Any, Any] = {}
         with self.assertRaises(ATSValueError):
-            self.assertFalse(template.read(templates))
+            self.assertFalse(template.read(templates, 'gtkmm3'))
 
     def test_read_template_none(self) -> None:
         '''Test read templates None'''
         template = ReadTemplate()
         with self.assertRaises(ATSTypeError):
-            self.assertFalse(template.read(None))  # type: ignore
+            self.assertFalse(template.read(None, 'gtkmm4'))  # type: ignore
 
     def test_read_template(self) -> None:
         '''Test read templates'''
@@ -95,7 +95,9 @@ class ReadTemplateTestCase(TestCase):
         current_dir: str = dirname(realpath(__file__))
         pro_structure: str = f'{current_dir}/../gen_gtkmm/conf/project.yaml'
         yml2obj = Yaml2Object(pro_structure)
-        self.assertTrue(bool(template.read(yml2obj.read_configuration())))
+        self.assertTrue(bool(template.read(
+            yml2obj.read_configuration(), 'gtkmm3'
+        )))
 
 
 if __name__ == '__main__':

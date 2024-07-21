@@ -37,7 +37,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_gtkmm'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.1.5'
+__version__ = '1.1.6'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -58,7 +58,8 @@ class GenGtkMMTestCase(TestCase):
                 | tearDown - Call after test case.
                 | test_default_create - Default on create is not None.
                 | test_missing_args - Missing args.
-                | test_process - Generate project.
+                | test_process3 - Generate project gtkmm3.
+                | test_process4 - Generate project gtkmm4.
                 | test_pro_already_exists - Generate already existing project.
     '''
 
@@ -84,14 +85,28 @@ class GenGtkMMTestCase(TestCase):
         sys.argv.clear()
         sys.argv.insert(0, '-d')
         sys.argv.insert(1, 'wrong')
+        sys.argv.insert(2, '-t')
+        sys.argv.insert(3, 'gtkmm3')
         generator: GenGtkMM = GenGtkMM()
         self.assertFalse(generator.process())
 
-    def test_process(self) -> None:
+    def test_process3(self) -> None:
         '''Generate project'''
         sys.argv.clear()
         sys.argv.insert(0, '-n')
-        sys.argv.insert(1, 'latest')
+        sys.argv.insert(1, 'latest3')
+        sys.argv.insert(2, '-t')
+        sys.argv.insert(3, 'gtkmm3')
+        generator: GenGtkMM = GenGtkMM()
+        self.assertTrue(generator.process())
+
+    def test_process4(self) -> None:
+        '''Generate project'''
+        sys.argv.clear()
+        sys.argv.insert(0, '-n')
+        sys.argv.insert(1, 'latest4')
+        sys.argv.insert(2, '-t')
+        sys.argv.insert(3, 'gtkmm4')
         generator: GenGtkMM = GenGtkMM()
         self.assertTrue(generator.process())
 
@@ -100,6 +115,8 @@ class GenGtkMMTestCase(TestCase):
         sys.argv.clear()
         sys.argv.insert(0, '-n')
         sys.argv.insert(1, 'fresh_new')
+        sys.argv.insert(2, '-t')
+        sys.argv.insert(3, 'gtkmm3')
         generator: GenGtkMM = GenGtkMM()
         makedirs('fresh_new')
         self.assertFalse(generator.process())

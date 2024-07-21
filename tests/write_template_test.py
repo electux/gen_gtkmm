@@ -41,7 +41,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_gtkmm'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.1.5'
+__version__ = '1.1.6'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -99,7 +99,7 @@ class WriteTemplateTestCase(TestCase):
         template = ReadTemplate()
         yml2obj = Yaml2Object(f'{current_dir}{pro}')
         templates: List[Dict[str, str]] = template.read(
-            yml2obj.read_configuration()
+            yml2obj.read_configuration(), 'gtkmm4'
         )
         template = WriteTemplate()
         self.assertTrue(template.write(templates, 'new_simple_test'))

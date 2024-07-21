@@ -1,9 +1,10 @@
 #
 # @brief   new_simple_test
-# @version 1.1.5
-# @date    2024-07-08 20:11:31.045521
+# @version 1.1.6
+# @date    2024-07-21 13:32:20.612994
 # @company None, free software to use 2024
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
 
-OBJECTS=$(SOURCES:.cc=.o)
+OBJECTS = $(SOURCES:.cc=.o)
+

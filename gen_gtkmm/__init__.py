@@ -44,7 +44,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_gtkmm'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.1.5'
+__version__ = '1.1.6'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -73,7 +73,9 @@ class GenGtkMM(ATSCli):
     _CONFIG: str = '/conf/gen_gtkmm.cfg'
     _LOG: str = '/log/gen_gtkmm.log'
     _LOGO: str = '/conf/gen_gtkmm.logo'
-    _OPS: List[str] = ['-n', '--name', '-v', '--verbose']
+    _OPS: List[str] = [
+        '-n', '--name', '-t', '--type', '-v', '--verbose'
+    ]
 
     def __init__(self, verbose: bool = False) -> None:
         '''
@@ -106,7 +108,11 @@ class GenGtkMM(ATSCli):
                 help='generate project (provide name)'
             )
             self.add_new_option(
-                self._OPS[2], self._OPS[3],
+                self._OPS[2], self._OPS[3], dest='type',
+                help='set type of project (gtkmm3 | gtkmm4)'
+            )
+            self.add_new_option(
+                self._OPS[4], self._OPS[5],
                 action='store_true', default=False,
                 help='activate verbose mode for generation'
             )
@@ -125,9 +131,14 @@ class GenGtkMM(ATSCli):
         if self.is_operational():
             try:
                 args: Optional[Namespace] = self.parse_args(sys.argv)
-                if not bool(getattr(args, "name")):
+                if not bool(getattr(args, 'name')):
                     error_message(
                         [f'{self._GEN_VERBOSE.lower()} missing name argument']
+                    )
+                    return status
+                if not bool(getattr(args, 'type')):
+                    error_message(
+                        [f'{self._GEN_VERBOSE.lower()} missing type argument']
                     )
                     return status
                 if exists(f'{getcwd()}/{str(getattr(args, "name"))}'):
@@ -148,7 +159,7 @@ class GenGtkMM(ATSCli):
                         ])
                     )
                     status = gen.gen_pro_setup(
-                        f'{getattr(args, "name")}',
+                        str(getattr(args, 'name')), str(getattr(args, 'type')),
                         getattr(args, 'verbose') or verbose
                     )
                 except (ATSTypeError, ATSValueError) as e:
@@ -167,7 +178,10 @@ class GenGtkMM(ATSCli):
                     )
             except SystemExit:
                 error_message(
-                    [f'{self._GEN_VERBOSE.lower()} expected argument name']
+                    [
+                        f'{self._GEN_VERBOSE.lower()} expected arguments',
+                        'name of project and type of project'
+                    ]
                 )
                 return status
         else:

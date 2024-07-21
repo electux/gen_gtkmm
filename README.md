@@ -114,14 +114,50 @@ Generator structure
         │   ├── gen_gtkmm_util.cfg
         │   ├── project.yaml
         │   └── template/
-        │       ├── ccflags.template
-        │       ├── header_module.template
-        │       ├── ldflags.template
-        │       ├── main_module.template
-        │       ├── Makefile.template
-        │       ├── objects.template
-        │       ├── source_module.template
-        │       └── sources.template
+        │       ├── gtkmm3/
+        │       │   ├── about_header.template
+        │       │   ├── about_source.template
+        │       │   ├── application_header.template
+        │       │   ├── application_source.template
+        │       │   ├── csflags.template
+        │       │   ├── cxxflags.template
+        │       │   ├── help_header.template
+        │       │   ├── help_source.template
+        │       │   ├── home_header.template
+        │       │   ├── home_source.template
+        │       │   ├── imodel_header.template
+        │       │   ├── main_source.template
+        │       │   ├── Makefile.template
+        │       │   ├── model_header.template
+        │       │   ├── model_source.template
+        │       │   ├── objects.template
+        │       │   ├── odflags.template
+        │       │   ├── settings_header.template
+        │       │   ├── settings_source.template
+        │       │   ├── sources.template
+        │       │   └── toolchain.template
+        │       └── gtkmm4/
+        │           ├── about_header.template
+        │           ├── about_source.template
+        │           ├── application_header.template
+        │           ├── application_source.template
+        │           ├── csflags.template
+        │           ├── cxxflags.template
+        │           ├── help_header.template
+        │           ├── help_source.template
+        │           ├── home_header.template
+        │           ├── home_source.template
+        │           ├── imodel_header.template
+        │           ├── main_source.template
+        │           ├── Makefile.template
+        │           ├── model_header.template
+        │           ├── model_source.template
+        │           ├── objects.template
+        │           ├── odflags.template
+        │           ├── settings_header.template
+        │           ├── settings_source.template
+        │           ├── sources.template
+        │           └── toolchain.template
         ├── __init__.py
         ├── log/
         │   └── gen_gtkmm.log
@@ -132,23 +168,23 @@ Generator structure
         ├── py.typed
         └── run/
             └── gen_gtkmm_run.py
-    
-    6 directories, 19 files
+
+    8 directories, 53 files
 ```
 
 ### Code coverage
 
 | Name | Stmts | Miss | Cover |
 |------|-------|------|-------|
-| `gen_gtkmm/__init__.py` | 71 | 12 | 83% |
-| `gen_gtkmm/pro/__init__.py` | 59 | 2 | 97% |
-| `gen_gtkmm/pro/read_template.py` | 54 | 2 | 96% |
-| `gen_gtkmm/pro/write_template.py` | 72 | 4 | 94% |
-| **Total** | 256 | 20 | 92% |
+| `gen_gtkmm/__init__.py` | 75 | 14 | 81% |
+| `gen_gtkmm/pro/__init__.py` | 61 | 3 | 95% |
+| `gen_gtkmm/pro/read_template.py` | 57 | 3 | 95% |
+| `gen_gtkmm/pro/write_template.py` | 86 | 4 | 95% |
+| **Total** | 279 | 24 | 91% |
 
 ### Docs
 
-[![Documentation Status](https://readthedocs.org/projects/gen-esp/badge/?version=latest)](https://gen-esp.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/gen-gtkmm/badge/?version=latest)](https://gen-gtkmm.readthedocs.io/en/latest/?badge=latest)
 
 More documentation and info at
 

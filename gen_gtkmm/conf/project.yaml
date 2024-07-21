@@ -1,19 +1,45 @@
 templates:
-  - source_module.template
-  - header_module.template
-  - main_module.template
-  - ccflags.template
-  - ldflags.template
-  - sources.template
-  - objects.template
+  - about_header.template
+  - about_source.template
+  - application_header.template
+  - application_source.template
+  - csflags.template
+  - cxxflags.template
+  - help_header.template
+  - help_source.template
+  - home_header.template
+  - home_source.template
+  - imodel_header.template
+  - model_header.template
+  - model_source.template
+  - main_source.template
   - Makefile.template
+  - objects.template
+  - odflags.template
+  - settings_header.template
+  - settings_source.template
+  - sources.template
+  - toolchain.template
 
 modules:
-  - source_module.cc
-  - header_module.h
+  - about.h
+  - about.cc
+  - application.h
+  - application.cc
+  - csflags.mk
+  - cxxflags.mk
+  - help.h
+  - help.cc
+  - home.h
+  - home.cc
+  - imodel.h
+  - model.h
+  - model.cc
   - main.cc
-  - ccflags.mk
-  - ldflags.mk
-  - sources.mk
-  - objects.mk
   - Makefile
+  - objects.mk
+  - odflags.mk
+  - settings.h
+  - settings.cc
+  - sources.mk
+  - toolchain.mk

@@ -41,7 +41,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_gtkmm'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.1.5'
+__version__ = '1.1.6'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -107,12 +107,22 @@ class WriteTemplate(FileCheck):
         pro_dir: str = f'{getcwd()}/{pro_name}'
         all_stat: List[bool] = []
         build_dir: str = f'{pro_dir}/build'
+        model_dir: str = f'{pro_dir}/model'
+        view_dir: str = f'{pro_dir}/view'
+        about_dir: str = f'{view_dir}/about'
+        help_dir: str = f'{view_dir}/help'
+        settings_dir: str = f'{view_dir}/settings'
         num_of_modules: int = len(templates)
         module_path: Optional[str] = None
         module_content: Optional[str] = None
         if not exists(pro_dir):
             mkdir(pro_dir)
             mkdir(build_dir)
+            mkdir(model_dir)
+            mkdir(view_dir)
+            mkdir(about_dir)
+            mkdir(help_dir)
+            mkdir(settings_dir)
         for pro_item in templates:
             module_name: str = list(pro_item.keys())[0]
             if any([
@@ -121,13 +131,17 @@ class WriteTemplate(FileCheck):
             ]):
                 module_path = f'{build_dir}/{module_name}'
             else:
-                if 'main' in module_name:
-                    module_path = f'{pro_dir}/{module_name}'
+                if 'model' in module_name:
+                    module_path = f'{model_dir}/{module_name}'
+                elif 'home' in module_name:
+                    module_path = f'{view_dir}/{module_name}'
+                elif 'about' in module_name:
+                    module_path = f'{about_dir}/{module_name}'
+                elif 'help' in module_name:
+                    module_path = f'{help_dir}/{module_name}'
+                elif 'settings' in module_name:
+                    module_path = f'{settings_dir}/{module_name}'
                 else:
-                    module_content = pro_item[module_name]
-                    pro_item.pop(module_name)
-                    module_name = f'{pro_name}.{module_name.split(".")[1]}'
-                    pro_item[module_name] = module_content
                     module_path = f'{pro_dir}/{module_name}'
             template: Template = Template(pro_item[module_name])
             if bool(template):
@@ -135,8 +149,6 @@ class WriteTemplate(FileCheck):
                     module_content = template.substitute(
                         {
                             'PRO': pro_name,
-                            'PRO_UP': pro_name.upper(),
-                            'PRO_CLASS': pro_name.capitalize(),
                             'DATE': f'{datetime.now()}',
                             'YEAR': f'{datetime.now().year}'
                         }
