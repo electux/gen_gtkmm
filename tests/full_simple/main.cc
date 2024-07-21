@@ -16,14 +16,15 @@
  * You should have received a copy of the GNU General Public License along
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#include "full_simple.h"
-#include <gtkmm/application.h>
+#include "application.h"
+
+using namespace Electux::App;
 
 int main(int argc, char *argv[])
 {
-  auto app = Gtk::Application::create(argc, argv, "org.gtkmm.full_simple");
+    auto app = EntryApplication::create();
+    const int status = app->run(argc, argv);
 
-  Full_simple object_full_simple;
-
-  return app->run(object_full_simple);
+    return status;
 }
+

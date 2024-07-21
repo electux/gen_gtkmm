@@ -114,14 +114,50 @@ pip3<span class="w"> </span>install<span class="w"> </span>gen_gtkmm
 <span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>gen_gtkmm_util.cfg
 <span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>project.yaml
 <span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>template/
-<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>ccflags.template
-<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>header_module.template
-<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>ldflags.template
-<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>main_module.template
-<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>Makefile.template
-<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>objects.template
-<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>source_module.template
-<span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>sources.template
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>gtkmm3/
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>about_header.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>about_source.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>application_header.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>application_source.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>csflags.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>cxxflags.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>help_header.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>help_source.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>home_header.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>home_source.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>imodel_header.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>main_source.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>Makefile.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>model_header.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>model_source.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>objects.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>odflags.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>settings_header.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>settings_source.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>sources.template
+<span class="w">    </span>│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>toolchain.template
+<span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>gtkmm4/
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>about_header.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>about_source.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>application_header.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>application_source.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>csflags.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>cxxflags.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>help_header.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>help_source.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>home_header.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>home_source.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>imodel_header.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>main_source.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>Makefile.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>model_header.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>model_source.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>objects.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>odflags.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>settings_header.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>settings_source.template
+<span class="w">    </span>│<span class="w">           </span>├──<span class="w"> </span>sources.template
+<span class="w">    </span>│<span class="w">           </span>└──<span class="w"> </span>toolchain.template
 <span class="w">    </span>├──<span class="w"> </span>__init__.py
 <span class="w">    </span>├──<span class="w"> </span>log/
 <span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>gen_gtkmm.log
@@ -133,7 +169,7 @@ pip3<span class="w"> </span>install<span class="w"> </span>gen_gtkmm
 <span class="w">    </span>└──<span class="w"> </span>run/
 <span class="w">        </span>└──<span class="w"> </span>gen_gtkmm_run.py
 
-<span class="m">6</span><span class="w"> </span>directories,<span class="w"> </span><span class="m">19</span><span class="w"> </span>files
+<span class="m">8</span><span class="w"> </span>directories,<span class="w"> </span><span class="m">53</span><span class="w"> </span>files
 </pre></div>
 </div>
 </section>

@@ -39,7 +39,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_gtkmm'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.1.5'
+__version__ = '1.1.6'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -83,13 +83,18 @@ class ReadTemplate(FileCheck, TemplateDir):
             self.template_dir = pro_template_dir
 
     def read(
-        self, config: Dict[Any, Any], verbose: bool = False
+        self,
+        config: Dict[Any, Any],
+        pro_type: Optional[str],
+        verbose: bool = False
     ) -> Templates:
         '''
             Reads a templates.
 
             :param config: Project configuration
             :type config: <Dict[Any, Any]>
+            :param pro_type: Project type | None
+            :type pro_type: <Optional[str]>
             :param verbose: Enable/Disable verbose option
             :type verbose: <bool>
             :return: List with templates
@@ -98,17 +103,22 @@ class ReadTemplate(FileCheck, TemplateDir):
         '''
         error_msg: Optional[str] = None
         error_id: Optional[int] = None
-        error_msg, error_id = self.check_params([('dict:config', config)])
+        error_msg, error_id = self.check_params([
+            ('dict:config', config), ('str:pro_type', pro_type)
+        ])
         if error_id == self.TYPE_ERROR:
             raise ATSTypeError(error_msg)
         if not bool(config):
             raise ATSValueError('missing templates')
+        if not bool(pro_type):
+            raise ATSValueError('missing project type')
         templates: List[str] = config[ProConfig.TEMPLATES]
         modules: List[str] = config[ProConfig.MODULES]
         loaded_templates: Templates = []
         for template_file, module_file in zip(templates, modules):
             template_content: Optional[str] = None
-            template_file_path: str = f'{self.template_dir}{template_file}'
+            template_type: str = f'{self.template_dir}{pro_type}'
+            template_file_path: str = f'{template_type}/{template_file}'
             self.check_path(template_file_path, verbose)
             self.check_mode('r', verbose)
             self.check_format(template_file_path, ProConfig.FORMAT, verbose)

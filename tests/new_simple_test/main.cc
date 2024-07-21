@@ -16,14 +16,15 @@
  * You should have received a copy of the GNU General Public License along
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-#include "new_simple_test.h"
-#include <gtkmm/application.h>
+#include "application.h"
+
+using namespace Electux::App;
 
 int main(int argc, char *argv[])
 {
-  auto app = Gtk::Application::create(argc, argv, "org.gtkmm.new_simple_test");
+    auto app = EntryApplication::create();
+    const int status = app->run(argc, argv);
 
-  New_simple_test object_new_simple_test;
-
-  return app->run(object_new_simple_test);
+    return status;
 }
+

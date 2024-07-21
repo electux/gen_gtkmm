@@ -1,9 +1,17 @@
 #
 # @brief   new_simple_test
-# @version 1.1.5
-# @date    2024-07-08 20:11:31.016692
+# @version 1.1.6
+# @date    2024-07-21 13:32:20.726471
 # @company None, free software to use 2024
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
 
-SOURCES=../new_simple_test.cc ../main.cc
+SOURCES = \
+	../model/model.cc \
+	../view/home.cc \
+	../view/about/about.cc \
+	../view/help/help.cc \
+	../view/settings/settings.cc \
+	../application.cc \
+	../main.cc
+

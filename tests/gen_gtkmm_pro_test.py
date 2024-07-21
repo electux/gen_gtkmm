@@ -38,7 +38,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_gtkmm'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.1.5'
+__version__ = '1.1.6'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -90,18 +90,18 @@ class GtkMMSetupTestCase(TestCase):
         '''Create project with missing name'''
         generator: GtkMMSetup = GtkMMSetup()
         with self.assertRaises(ATSValueError):
-            generator.gen_pro_setup("")
+            generator.gen_pro_setup("", "gtkmm3")
 
     def test_gen_project_none(self) -> None:
         '''Create project with None name'''
         generator: GtkMMSetup = GtkMMSetup()
         with self.assertRaises(ATSTypeError):
-            generator.gen_pro_setup(None)
+            generator.gen_pro_setup(None, "gtkmm3")
 
     def test_gen_project(self) -> None:
         '''Create project'''
         generator: GtkMMSetup = GtkMMSetup()
-        self.assertTrue(generator.gen_pro_setup('full_simple'))
+        self.assertTrue(generator.gen_pro_setup('full_simple', 'gtkmm3'))
 
 
 if __name__ == '__main__':
