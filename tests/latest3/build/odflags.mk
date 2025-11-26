@@ -1,8 +1,8 @@
 #
 # @brief   latest3 object dump flags
-# @version 1.1.6
-# @date    2024-07-21 13:32:14.597524
-# @company None, free software to use 2024
+# @version 1.1.7
+# @date    2025-11-26 01:12:32.360771
+# @company None, free software to use 2025
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
 
