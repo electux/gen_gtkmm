@@ -29,7 +29,7 @@ __author__: str = 'Vladimir Roncevic'
 __copyright__: str = '(C) 2026, https://electux.github.io/gen_gtkmm'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__: str = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__: str = '1.1.7'
+__version__: str = '1.1.8'
 __maintainer__: str = 'Vladimir Roncevic'
 __email__: str = 'elektron.ronca@gmail.com'
 __status__: str = 'Updated'
@@ -50,7 +50,7 @@ SUPPORTED_PY_VERSIONS: List[str] = [
 PYP_CLASSIFIERS: List[str] = SUPPORTED_PY_VERSIONS
 setup(
     name='gen_gtkmm',
-    version='1.1.7',
+    version='1.1.8',
     description='GTK-- project skeleton generator',
     author='Vladimir Roncevic',
     author_email='elektron.ronca@gmail.com',
