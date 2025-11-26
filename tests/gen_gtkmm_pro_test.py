@@ -4,7 +4,7 @@
 Module
     gen_gtkmm_pro_test.py
 Copyright
-    Copyright (C) 2021 - 2024 Vladimir Roncevic <elektron.ronca@gmail.com>
+    Copyright (C) 2021 - 2026 Vladimir Roncevic <elektron.ronca@gmail.com>
     gen_gtkmm is free software: you can redistribute it and/or modify it
     under the terms of the GNU General Public License as published by the
     Free Software Foundation, either version 3 of the License, or
@@ -34,14 +34,14 @@ except ImportError as test_error_message:
     # Force close python test #################################################
     sys.exit(f'\n{__file__}\n{test_error_message}\n')
 
-__author__ = 'Vladimir Roncevic'
-__copyright__ = '(C) 2024, https://electux.github.io/gen_gtkmm'
+__author__: str = 'Vladimir Roncevic'
+__copyright__: str = '(C) 2026, https://electux.github.io/gen_gtkmm'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
-__license__ = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.1.6'
-__maintainer__ = 'Vladimir Roncevic'
-__email__ = 'elektron.ronca@gmail.com'
-__status__ = 'Updated'
+__license__: str = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
+__version__: str = '1.1.7'
+__maintainer__: str = 'Vladimir Roncevic'
+__email__: str = 'elektron.ronca@gmail.com'
+__status__: str = 'Updated'
 
 
 class GtkMMSetupTestCase(TestCase):

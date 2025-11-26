@@ -23,6 +23,7 @@ other information that should be provided before the modules are installed.
     - [Install using docker](#install-using-docker)
 - [Dependencies](#dependencies)
 - [Tool structure](#tool-structure)
+- [Code coverage](#code-coverage)
 - [Docs](#docs)
 - [Copyright and licence](#copyright-and-licence)
 
@@ -176,11 +177,11 @@ Generator structure
 
 | Name | Stmts | Miss | Cover |
 |------|-------|------|-------|
-| `gen_gtkmm/__init__.py` | 75 | 14 | 81% |
-| `gen_gtkmm/pro/__init__.py` | 61 | 3 | 95% |
-| `gen_gtkmm/pro/read_template.py` | 57 | 3 | 95% |
-| `gen_gtkmm/pro/write_template.py` | 86 | 4 | 95% |
-| **Total** | 279 | 24 | 91% |
+| `gen_gtkmm/__init__.py` | 73 | 12 | 84%|
+| `gen_gtkmm/pro/__init__.py` | 59 | 1 | 98%|
+| `gen_gtkmm/pro/read_template.py` | 55 | 1 | 98%|
+| `gen_gtkmm/pro/write_template.py` | 84 | 2 | 98%|
+| **Total** | 271 | 16 | 94% |
 
 ### Docs
 
@@ -196,7 +197,7 @@ More documentation and info at
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Copyright (C) 2021 - 2024 by [electux.github.io/gen_gtkmm](https://electux.github.io/gen_gtkmm/)
+Copyright (C) 2021 - 2026 by [electux.github.io/gen_gtkmm](https://electux.github.io/gen_gtkmm/)
 
 This tool is free software; you can redistribute it and/or modify
 it under the same terms as Python itself, either Python version 3.x or,
