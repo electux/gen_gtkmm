@@ -1,14 +1,14 @@
 name: gen_gtkmm_python3_build
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - 'gen_gtkmm/**'
       - 'MANIFEST.in'
       - 'pyproject.toml'
       - 'setup.py'
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - 'gen_gtkmm/**'
       - 'MANIFEST.in'
