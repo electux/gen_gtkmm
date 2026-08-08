@@ -1,28 +1,27 @@
-GTK-- project skeleton generator
---------------------------------
+Create Gtkmm project skeleton
+----------------------------
 
-**gen_gtkmm** is toolset for generation GTK-- project skeleton for
-developmet of desktop and embedded applications.
+**gen_gtkmm** is tool for creating Gtkmm project skeleton.
 
-Developed in `python <https://www.python.org/>`_ code: **100%**.
+Developed in `python <https://www.python.org/>`_ code.
 
-The README is used to introduce the modules and provide instructions on
-how to install the modules, any machine dependencies it may have and any
-other information that should be provided before the modules are installed.
+The README is used to introduce the tool and provide instructions on
+how to install the tool, any machine dependencies it may have and any
+other information that should be provided before the tool is installed.
 
 |gen_gtkmm python checker| |gen_gtkmm python package| |github issues| |documentation status| |github contributors|
 
-.. |gen_gtkmm python checker| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml/badge.svg
-   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml
+.. |gen_gtkmm python checker| image:: https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml
 
-.. |gen_gtkmm python package| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_package_checker.yml/badge.svg
-   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_package.yml
+.. |gen_gtkmm python package| image:: https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_package_checker.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_package.yml
 
-.. |github issues| image:: https://img.shields.io/github/issues/electux/gen_gtkmm.svg
-   :target: https://github.com/electux/gen_gtkmm/issues
+.. |github issues| image:: https://img.shields.io/github/issues/vroncevic/gen_gtkmm.svg
+   :target: https://github.com/vroncevic/gen_gtkmm/issues
 
-.. |github contributors| image:: https://img.shields.io/github/contributors/electux/gen_gtkmm.svg
-   :target: https://github.com/electux/gen_gtkmm/graphs/contributors
+.. |github contributors| image:: https://img.shields.io/github/contributors/vroncevic/gen_gtkmm.svg
+   :target: https://github.com/vroncevic/gen_gtkmm/graphs/contributors
 
 .. |documentation status| image:: https://readthedocs.org/projects/gen-gtkmm/badge/?version=latest
    :target: https://gen-gtkmm.readthedocs.io/en/latest/?badge=latest
@@ -34,17 +33,17 @@ other information that should be provided before the modules are installed.
    self
    modules
 
-Installation
--------------
+🚀 Installation
+---------------
 
 |gen_gtkmm python3 build|
 
-.. |gen_gtkmm python3 build| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml/badge.svg
-   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml
+.. |gen_gtkmm python3 build| image:: https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml
 
 Navigate to release `page`_ download and extract release archive.
 
-.. _page: https://github.com/electux/gen_gtkmm/releases
+.. _page: https://github.com/vroncevic/gen_gtkmm/releases
 
 To install **gen_gtkmm** type the following
 
@@ -62,128 +61,146 @@ To install **gen_gtkmm** type the following
     python3 -m build --no-isolation --wheel
     pip3 install ./dist/gen_gtkmm-*-py3-none-any.whl
     rm -f get-pip.py
-    chmod 755 /usr/local/lib/python3.10/dist-packages/usr/local/bin/gen_gtkmm_run.py
-    ln -s /usr/local/lib/python3.10/dist-packages/usr/local/bin/gen_gtkmm_run.py /usr/local/bin/gen_gtkmm_run.py
 
 You can use Docker to create image/container, or You can use pip to install
 
 .. code-block:: bash
 
-    #python3
+    # python3
     pip3 install gen_gtkmm
 
-Dependencies
--------------
+📦 Dependencies
+---------------
 
 **gen_gtkmm** requires next modules and libraries
 
 * `ats-utilities - Python App/Tool/Script Utilities <https://pypi.org/project/ats-utilities/>`_
 
+📁 Tool structure
+-----------------
+
+**gen_gtkmm** is based on OOP.
+
 Tool structure
----------------
-
-**gen_gtkmm** is based on OOP
-
-Code structure:
 
 .. code-block:: bash
 
     gen_gtkmm/
-        ├── conf/
-        │   ├── gen_gtkmm.cfg
-        │   ├── gen_gtkmm.logo
-        │   ├── gen_gtkmm_util.cfg
-        │   ├── project.yaml
-        │   └── template/
-        │       ├── gtkmm3/
-        │       │   ├── about_header.template
-        │       │   ├── about_source.template
-        │       │   ├── application_header.template
-        │       │   ├── application_source.template
-        │       │   ├── csflags.template
-        │       │   ├── cxxflags.template
-        │       │   ├── help_header.template
-        │       │   ├── help_source.template
-        │       │   ├── home_header.template
-        │       │   ├── home_source.template
-        │       │   ├── imodel_header.template
-        │       │   ├── main_source.template
-        │       │   ├── Makefile.template
-        │       │   ├── model_header.template
-        │       │   ├── model_source.template
-        │       │   ├── objects.template
-        │       │   ├── odflags.template
-        │       │   ├── settings_header.template
-        │       │   ├── settings_source.template
-        │       │   ├── sources.template
-        │       │   └── toolchain.template
-        │       └── gtkmm4/
-        │           ├── about_header.template
-        │           ├── about_source.template
-        │           ├── application_header.template
-        │           ├── application_source.template
-        │           ├── csflags.template
-        │           ├── cxxflags.template
-        │           ├── help_header.template
-        │           ├── help_source.template
-        │           ├── home_header.template
-        │           ├── home_source.template
-        │           ├── imodel_header.template
-        │           ├── main_source.template
-        │           ├── Makefile.template
-        │           ├── model_header.template
-        │           ├── model_source.template
-        │           ├── objects.template
-        │           ├── odflags.template
-        │           ├── settings_header.template
-        │           ├── settings_source.template
-        │           ├── sources.template
-        │           └── toolchain.template
-        ├── __init__.py
-        ├── log/
-        │   └── gen_gtkmm.log
-        ├── pro/
-        │   ├── __init__.py
-        │   ├── read_template.py
-        │   └── write_template.py
-        ├── py.typed
-        └── run/
-            └── gen_gtkmm_run.py
+         ├── core/
+         │   ├── __init__.py
+         │   ├── model/
+         │   │   ├── __init__.py
+         │   │   └── project_setup.py
+         │   └── service/
+         │       ├── engine.py
+         │       ├── __init__.py
+         │       ├── iservice.py
+         │       └── isubprocessor.py
+         ├── engine.py
+         ├── infrastructure/
+         │   ├── cli/
+         │   │   ├── engine.py
+         │   │   ├── icli.py
+         │   │   ├── __init__.py
+         │   │   └── setup/
+         │   │       ├── bundle.py
+         │   │       ├── dep_validator.py
+         │   │       ├── dependencies.py
+         │   │       ├── factory.py
+         │   │       ├── __init__.py
+         │   │       ├── keys.py
+         │   │       ├── opt_validator.py
+         │   │       ├── options.py
+         │   │       ├── registry.py
+         │   │       └── validator.py
+         │   ├── command/
+         │   │   ├── command.py
+         │   │   ├── gen_gtkmm_command_definition.py
+         │   │   ├── gen_gtkmm_command_executor.py
+         │   │   ├── icommand_definition.py
+         │   │   ├── icommand_executor.py
+         │   │   └── __init__.py
+         │   ├── config/
+         │   │   ├── gen_gtkmm.cfg
+         │   │   ├── gen_gtkmm.logo
+         │   │   ├── scheme.json
+         │   │   └── templates.tgz
+         │   └── subprocessor.py
+         ├── __init__.py
+         ├── py.typed
+         └── setup/
+             ├── bundle.py
+             ├── dep_validator.py
+             ├── dependencies.py
+             ├── factory.py
+             ├── __init__.py
+             ├── keys.py
+             ├── opt_validator.py
+             ├── options.py
+             ├── registry.py
+             └── validator.py
 
-    8 directories, 53 files
+     10 directories, 44 files
 
-Copyright and licence
-----------------------
+✨ Features
+-----------
 
-|license: gpl v3| |license: apache 2.0|
+* Automatically scaffolds UI Gtkmm projects with build/make files.
+* Provides a modular and extensible architecture based on OOP and SOLID principles.
+* Includes command line interface (CLI) support via a command/executor structure.
+* Robust validation of project bundles, dependencies, and options.
+* Comes with configurable templates and JSON schema definitions.
+* High code quality with full type checking and 100% unit test coverage.
 
-.. |license: gpl v3| image:: https://img.shields.io/badge/license-gplv3-blue.svg
-   :target: https://www.gnu.org/licenses/gpl-3.0
+📊 Code coverage
+----------------
 
-.. |license: apache 2.0| image:: https://img.shields.io/badge/license-apache%202.0-blue.svg
-   :target: https://opensource.org/licenses/apache-2.0
+.. csv-table:: Code coverage
+   :file: coverage_table.csv
+   :widths: 60, 10, 10, 20
+   :header-rows: 1
 
-Copyright (C) 2021 - 2024 by `electux.github.io/gen_gtkmm <https://electux.github.io/gen_gtkmm>`_
+🛠 Usage
+--------
+
+Install package
+
+.. code-block:: bash
+
+    pip3 install gen_gtkmm
+
+Prepare main entry point by downloading `main.py` or create your own.
+
+.. code-block:: bash
+
+    wget -O main.py https://raw.githubusercontent.com/vroncevic/gen_gtkmm/main/main.py
+
+Running tool for creating new Gtkmm project skeleton
+
+.. code-block:: bash
+
+    python3 main.py create --name mytool --type gtkmm4 --output ./demo/
+
+📚 Docs
+-------
+
+More documentation and info at
+
+* `gen_gtkmm.readthedocs.io <https://gen-gtkmm.readthedocs.io>`_
+* `www.python.org <https://www.python.org/>`_
+
+👥 Contributing
+---------------
+
+`Contributing to gen_gtkmm <https://github.com/vroncevic/gen_gtkmm/blob/dev/CONTRIBUTING.md>`_
+
+📄 Copyright and licence
+-------------------------
+
+Copyright (C) 2025 - 2026 by `vroncevic.github.io/gen_gtkmm <https://vroncevic.github.io/gen_gtkmm>`_
 
 **gen_gtkmm** is free software; you can redistribute it and/or modify
 it under the same terms as Python itself, either Python version 3.x or,
 at your option, any later version of Python 3 you may have available.
 
 Lets help and support PSF.
-
-|python software foundation|
-
-.. |python software foundation| image:: https://raw.githubusercontent.com/electux/gen_gtkmm/dev/docs/psf-logo-alpha.png
-   :target: https://www.python.org/psf/
-
-|donate|
-
-.. |donate| image:: https://www.paypalobjects.com/en_us/i/btn/btn_donatecc_lg.gif
-   :target: https://www.python.org/psf/donations/
-
-Indices and tables
-------------------
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

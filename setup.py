@@ -20,104 +20,71 @@ Info
     Defines setup for tool gen_gtkmm.
 '''
 
-from __future__ import print_function
-from typing import List, Optional
-from os.path import abspath, dirname, join
-from setuptools import setup
+from os import walk
+from os.path import abspath, dirname, join, relpath
+from setuptools import setup, find_packages
 
 __author__: str = 'Vladimir Roncevic'
-__copyright__: str = '(C) 2026, https://electux.github.io/gen_gtkmm'
-__credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
-__license__: str = 'https://github.com/electux/gen_gtkmm/blob/dev/LICENSE'
-__version__: str = '1.1.8'
+__copyright__: str = '(C) 2026, https://vroncevic.github.io/gen_gtkmm'
+__credits__: list[str] = ['Vladimir Roncevic', 'Python Software Foundation']
+__license__: str = 'https://github.com/vroncevic/gen_gtkmm/blob/dev/LICENSE'
+__version__: str = '1.0.3'
 __maintainer__: str = 'Vladimir Roncevic'
 __email__: str = 'elektron.ronca@gmail.com'
 __status__: str = 'Updated'
 
-TOOL_DIR: str = 'gen_gtkmm/'
-CONF: str = 'conf'
-TEMPLATE: str = 'conf/template'
-LOG: str = 'log'
 THIS_DIR: str = abspath(dirname(__file__))
-long_description: Optional[str] = None
+long_description: str | None = None
+
 with open(join(THIS_DIR, 'README.md'), encoding='utf-8') as readme:
     long_description = readme.read()
+
 PROGRAMMING_LANG: str = 'Programming Language :: Python ::'
-VERSIONS: List[str] = ['3.10', '3.11', '3.12']
-SUPPORTED_PY_VERSIONS: List[str] = [
-    f'{PROGRAMMING_LANG} {VERSION}' for VERSION in VERSIONS
-]
-PYP_CLASSIFIERS: List[str] = SUPPORTED_PY_VERSIONS
+VERSIONS: list[str] = ['3.12', '3.13', '3.14']
+SUPPORTED_PY_VERSIONS: list[str] = [f'{PROGRAMMING_LANG} {VERSION}' for VERSION in VERSIONS]
+PYP_CLASSIFIERS: list[str] = SUPPORTED_PY_VERSIONS
+
+
+def find_package_data(pkg: str) -> list[str]:
+    '''
+        Finds all files in package to include in package_data.
+
+        :param pkg: Package folder name.
+        :type pkg: <str>
+        :return: List of package files relative to the package folder.
+        :rtype: <list[str]>
+        :exceptions: None.
+    '''
+    package_data: list[str] = []
+
+    for root, dirs, files in walk(pkg):
+        dirs[:] = [d for d in dirs if d != '__pycache__']
+
+        for file in files:
+            if file.endswith('.pyc') or file == '.editorconfig':
+                continue
+
+            full_path: str = join(root, file)
+            rel_path: str = relpath(full_path, pkg)
+            package_data.append(rel_path)
+
+    return package_data
+
+
 setup(
     name='gen_gtkmm',
-    version='1.1.8',
-    description='GTK-- project skeleton generator',
+    version='1.0.3',
+    description='Generating gtkmm project',
     author='Vladimir Roncevic',
     author_email='elektron.ronca@gmail.com',
-    url='https://electux.github.io/gen_gtkmm/',
+    url='https://vroncevic.github.io/gen_gtkmm/',
     license='GPL-3.0-or-later',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    keywords='GTK--, Project, C++, Gtk, Unix, Linux',
+    keywords='Unix, Linux, Development, UI, Gtkmm, generator',
     platforms='POSIX',
     classifiers=PYP_CLASSIFIERS,
-    packages=['gen_gtkmm', 'gen_gtkmm.pro'],
+    packages=find_packages(exclude=['tests', 'tests.*', '*.*.pyc', '*.pyo']),
     install_requires=['ats-utilities'],
-    package_data={
-        'gen_gtkmm': [
-            'py.typed',
-            f'{CONF}/gen_gtkmm.logo',
-            f'{CONF}/gen_gtkmm.cfg',
-            f'{CONF}/gen_gtkmm_util.cfg',
-            f'{CONF}/project.yaml',
-            f'{TEMPLATE}/gtkmm3/about_header.template',
-            f'{TEMPLATE}/gtkmm3/about_source.template',
-            f'{TEMPLATE}/gtkmm3/application_header.template',
-            f'{TEMPLATE}/gtkmm3/application_source.template',
-            f'{TEMPLATE}/gtkmm3/csflags.template',
-            f'{TEMPLATE}/gtkmm3/cxxflags.template',
-            f'{TEMPLATE}/gtkmm3/help_header.template',
-            f'{TEMPLATE}/gtkmm3/help_source.template',
-            f'{TEMPLATE}/gtkmm3/home_header.template',
-            f'{TEMPLATE}/gtkmm3/home_source.template',
-            f'{TEMPLATE}/gtkmm3/imodel_header.template',
-            f'{TEMPLATE}/gtkmm3/model_header.template',
-            f'{TEMPLATE}/gtkmm3/model_source.template',
-            f'{TEMPLATE}/gtkmm3/main_source.template',
-            f'{TEMPLATE}/gtkmm3/Makefile.template',
-            f'{TEMPLATE}/gtkmm3/objects.template',
-            f'{TEMPLATE}/gtkmm3/odflags.template',
-            f'{TEMPLATE}/gtkmm3/settings_header.template',
-            f'{TEMPLATE}/gtkmm3/settings_source.template',
-            f'{TEMPLATE}/gtkmm3/sources.template',
-            f'{TEMPLATE}/gtkmm3/toolchain.template',
-            f'{TEMPLATE}/gtkmm4/about_header.template',
-            f'{TEMPLATE}/gtkmm4/about_source.template',
-            f'{TEMPLATE}/gtkmm4/application_header.template',
-            f'{TEMPLATE}/gtkmm4/application_source.template',
-            f'{TEMPLATE}/gtkmm4/csflags.template',
-            f'{TEMPLATE}/gtkmm4/cxxflags.template',
-            f'{TEMPLATE}/gtkmm4/help_header.template',
-            f'{TEMPLATE}/gtkmm4/help_source.template',
-            f'{TEMPLATE}/gtkmm4/home_header.template',
-            f'{TEMPLATE}/gtkmm4/home_source.template',
-            f'{TEMPLATE}/gtkmm4/imodel_header.template',
-            f'{TEMPLATE}/gtkmm4/model_header.template',
-            f'{TEMPLATE}/gtkmm4/model_source.template',
-            f'{TEMPLATE}/gtkmm4/main_source.template',
-            f'{TEMPLATE}/gtkmm4/Makefile.template',
-            f'{TEMPLATE}/gtkmm4/objects.template',
-            f'{TEMPLATE}/gtkmm4/odflags.template',
-            f'{TEMPLATE}/gtkmm4/settings_header.template',
-            f'{TEMPLATE}/gtkmm4/settings_source.template',
-            f'{TEMPLATE}/gtkmm4/sources.template',
-            f'{TEMPLATE}/gtkmm4/toolchain.template',
-            f'{LOG}/gen_gtkmm.log'
-        ]
-    },
-    data_files=[(
-        '/usr/local/bin/', [
-            f'{TOOL_DIR}run/gen_gtkmm_run.py'
-        ]
-    )]
+    package_data={'gen_gtkmm': find_package_data('gen_gtkmm')}
 )

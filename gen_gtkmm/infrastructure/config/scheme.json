@@ -1,0 +1,24 @@
+{
+    "gtkmm3": {
+        "source_dir": "gtkmm3",
+        "path_replacements": {
+            "dummy_nonexistent": "project_name"
+        },
+        "exclude": [
+            "**/.coverage",
+            "**/.vscode/**",
+            "**/.git/**"
+        ]
+    },
+    "gtkmm4": {
+        "source_dir": "gtkmm4",
+        "path_replacements": {
+            "dummy_nonexistent": "project_name"
+        },
+        "exclude": [
+            "**/.coverage",
+            "**/.vscode/**",
+            "**/.git/**"
+        ]
+    }
+}
