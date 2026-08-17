@@ -11,17 +11,17 @@ other information that should be provided before the tool is installed.
 
 |gen_gtkmm python checker| |gen_gtkmm python package| |github issues| |documentation status| |github contributors|
 
-.. |gen_gtkmm python checker| image:: https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml/badge.svg
-   :target: https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml
+.. |gen_gtkmm python checker| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml/badge.svg
+   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml
 
-.. |gen_gtkmm python package| image:: https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_package_checker.yml/badge.svg
-   :target: https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_package.yml
+.. |gen_gtkmm python package| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_package_checker.yml/badge.svg
+   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_package_checker.yml
 
-.. |github issues| image:: https://img.shields.io/github/issues/vroncevic/gen_gtkmm.svg
-   :target: https://github.com/vroncevic/gen_gtkmm/issues
+.. |github issues| image:: https://img.shields.io/github/issues/electux/gen_gtkmm.svg
+   :target: https://github.com/electux/gen_gtkmm/issues
 
-.. |github contributors| image:: https://img.shields.io/github/contributors/vroncevic/gen_gtkmm.svg
-   :target: https://github.com/vroncevic/gen_gtkmm/graphs/contributors
+.. |github contributors| image:: https://img.shields.io/github/contributors/electux/gen_gtkmm.svg
+   :target: https://github.com/electux/gen_gtkmm/graphs/contributors
 
 .. |documentation status| image:: https://readthedocs.org/projects/gen-gtkmm/badge/?version=latest
    :target: https://gen-gtkmm.readthedocs.io/en/latest/?badge=latest
@@ -36,14 +36,28 @@ other information that should be provided before the tool is installed.
 🚀 Installation
 ------------------
 
-|gen_gtkmm python3 build|
+Used next development environment
 
-.. |gen_gtkmm python3 build| image:: https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml/badge.svg
-   :target: https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml
+.. image:: https://raw.githubusercontent.com/electux/gen_gtkmm/dev/docs/debtux.png
+   :alt: debian linux os
+
+|gen_gtkmm python3 build| |gen_gtkmm interface checker| |gen_gtkmm isp checker| |gen_gtkmm srp checker|
+
+.. |gen_gtkmm python3 build| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml/badge.svg
+   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml
+
+.. |gen_gtkmm interface checker| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_interface_checker.yml/badge.svg
+   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_interface_checker.yml
+
+.. |gen_gtkmm isp checker| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_isp_checker.yml/badge.svg
+   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_isp_checker.yml
+
+.. |gen_gtkmm srp checker| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_srp_checker.yml/badge.svg
+   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_srp_checker.yml
 
 Navigate to release `page`_ download and extract release archive.
 
-.. _page: https://github.com/vroncevic/gen_gtkmm/releases
+.. _page: https://github.com/electux/gen_gtkmm/releases
 
 To install **gen_gtkmm** type the following
 
@@ -145,7 +159,7 @@ Tool structure
 ✨ Features
 -------------
 
-* Automatically scaffolds UI Gtkmm projects with build/make files.
+* Automatically scaffolds Gtkmm projects with build/make files.
 * Provides a modular and extensible architecture based on OOP and SOLID principles.
 * Includes command line interface (CLI) support via a command/executor structure.
 * Robust validation of project bundles, dependencies, and options.
@@ -169,11 +183,11 @@ Install package
 
     pip3 install gen_gtkmm
 
-Prepare main entry point by downloading `main.py` or create your own.
+Prepare main entry point by downloading `main.py <https://raw.githubusercontent.com/electux/gen_gtkmm/main/main.py>`_ or create your own.
 
 .. code-block:: bash
 
-    wget -O main.py https://raw.githubusercontent.com/vroncevic/gen_gtkmm/main/main.py
+    wget -O main.py https://raw.githubusercontent.com/electux/gen_gtkmm/main/main.py
 
 Running tool for creating new Gtkmm project skeleton
 
@@ -192,15 +206,34 @@ More documentation and info at
 👥 Contributing
 -----------------
 
-`Contributing to gen_gtkmm <https://github.com/vroncevic/gen_gtkmm/blob/dev/CONTRIBUTING.md>`_
+`Contributing to gen_gtkmm <https://github.com/electux/gen_gtkmm/blob/dev/CONTRIBUTING.md>`_
 
 📄 Copyright and licence
 --------------------------
 
-Copyright (C) 2025 - 2026 by `vroncevic.github.io/gen_gtkmm <https://vroncevic.github.io/gen_gtkmm>`_
+|gpl v3 license| |apache 2.0 license|
+
+Copyright (C) 2025 - 2026 by `electux.github.io/gen_gtkmm <https://electux.github.io/gen_gtkmm/>`_
 
 **gen_gtkmm** is free software; you can redistribute it and/or modify
 it under the same terms as Python itself, either Python version 3.x or,
 at your option, any later version of Python 3 you may have available.
 
 Lets help and support PSF.
+
+|psf logo|
+
+|donate|
+
+.. |gpl v3 license| image:: https://img.shields.io/badge/License-GPLv3-blue.svg
+   :target: https://www.gnu.org/licenses/gpl-3.0
+
+.. |apache 2.0 license| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
+   :target: https://opensource.org/licenses/Apache-2.0
+
+.. |psf logo| image:: https://raw.githubusercontent.com/electux/gen_gtkmm/dev/docs/psf-logo-alpha.png
+   :target: https://www.python.org/psf/
+
+.. |donate| image:: https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif
+   :target: https://www.python.org/psf/donations/
+
