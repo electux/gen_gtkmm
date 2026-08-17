@@ -7,7 +7,16 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   gen_gtkmm.pro
+   gen_gtkmm.core
+   gen_gtkmm.setup
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gen_gtkmm.engine
 
 Module contents
 ---------------

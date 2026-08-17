@@ -5,4 +5,4 @@ gen_gtkmm
    :maxdepth: 4
 
    gen_gtkmm
-
+   main
