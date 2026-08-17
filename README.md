@@ -1,6 +1,6 @@
 # Create Gtkmm project skeleton
 
-<img align="right" src="https://raw.githubusercontent.com/vroncevic/gen_gtkmm/dev/docs/gen_gtkmm_logo.png" width="25%">
+<img align="right" src="https://raw.githubusercontent.com/electux/gen_gtkmm/dev/docs/gen_gtkmm_logo.png" width="25%">
 
 **gen_gtkmm** is tool for creating Gtkmm project skeleton.
 
@@ -10,7 +10,7 @@ The README is used to introduce the tool and provide instructions on
 how to install the tool, any machine dependencies it may have and any
 other information that should be provided before the tool is installed.
 
-[![gen_gtkmm python checker](https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml/badge.svg)](https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml) [![gen_gtkmm package checker](https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_package_checker.yml/badge.svg)](https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_package.yml) [![GitHub issues open](https://img.shields.io/github/issues/vroncevic/gen_gtkmm.svg)](https://github.com/vroncevic/gen_gtkmm/issues) [![GitHub contributors](https://img.shields.io/github/contributors/vroncevic/gen_gtkmm.svg)](https://github.com/vroncevic/gen_gtkmm/graphs/contributors)
+[![gen_gtkmm_python_checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml) [![gen_gtkmm_package_checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_package_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_package_checker.yml) [![GitHub issues open](https://img.shields.io/github/issues/electux/gen_gtkmm.svg)](https://github.com/electux/gen_gtkmm/issues) [![GitHub contributors](https://img.shields.io/github/contributors/electux/gen_gtkmm.svg)](https://github.com/electux/gen_gtkmm/graphs/contributors)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -36,9 +36,9 @@ other information that should be provided before the tool is installed.
 
 Used next development environment
 
-![debian linux os](https://raw.githubusercontent.com/vroncevic/gen_gtkmm/dev/docs/debtux.png)
+![debian linux os](https://raw.githubusercontent.com/electux/gen_gtkmm/dev/docs/debtux.png)
 
-[![gen_gtkmm python3 build](https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml/badge.svg)](https://github.com/vroncevic/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml)
+[![gen_gtkmm python3 build](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml) [![gen_gtkmm_interface_checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_interface_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_interface_checker.yml) [![gen_gtkmm_isp_checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_isp_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_isp_checker.yml) [![gen_gtkmm_srp_checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_srp_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_srp_checker.yml)
 
 Currently there are four ways to install package
 * Install process based on using pip mechanism
@@ -59,7 +59,7 @@ pip3 install gen_gtkmm
 
 ##### Install using build
 
-Navigate to release **[page](https://github.com/vroncevic/gen_gtkmm/releases/)** download and extract release archive.
+Navigate to release **[page](https://github.com/electux/gen_gtkmm/releases/)** download and extract release archive.
 
 To install **gen_gtkmm** type the following
 
@@ -82,7 +82,7 @@ rm -f get-pip.py
 
 ##### Install using py setup
 
-Navigate to **[release page](https://github.com/vroncevic/gen_gtkmm/releases)** download and extract release archive.
+Navigate to **[release page](https://github.com/electux/gen_gtkmm/releases)** download and extract release archive.
 
 To install **gen_gtkmm** locate and run setup.py with arguments
 
@@ -241,11 +241,11 @@ Install package
 pip3 install gen_gtkmm
 ```
 
-Prepare main entry point by downloading [main.py](https://raw.githubusercontent.com/vroncevic/gen_gtkmm/main/main.py) or create your own.
+Prepare main entry point by downloading [main.py](https://raw.githubusercontent.com/electux/gen_gtkmm/main/main.py) or create your own.
 
 
 ```bash
-wget -O main.py https://raw.githubusercontent.com/vroncevic/gen_gtkmm/main/main.py
+wget -O main.py https://raw.githubusercontent.com/electux/gen_gtkmm/main/main.py
 ```
 
 Running tool for creating new Gtkmm project skeleton
@@ -271,7 +271,7 @@ More documentation and info at
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Copyright (C) 2025 - 2026 by [vroncevic.github.io/gen_gtkmm](https://vroncevic.github.io/gen_gtkmm/)
+Copyright (C) 2025 - 2026 by [electux.github.io/gen_gtkmm](https://electux.github.io/gen_gtkmm/)
 
 **gen_gtkmm** is free software; you can redistribute it and/or modify
 it under the same terms as Python itself, either Python version 3.x or,
@@ -279,6 +279,6 @@ at your option, any later version of Python 3 you may have available.
 
 Lets help and support PSF.
 
-[![Python Software Foundation](https://raw.githubusercontent.com/vroncevic/gen_gtkmm/dev/docs/psf-logo-alpha.png)](https://www.python.org/psf/)
+[![Python Software Foundation](https://raw.githubusercontent.com/electux/gen_gtkmm/dev/docs/psf-logo-alpha.png)](https://www.python.org/psf/)
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.python.org/psf/donations/)
