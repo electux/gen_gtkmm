@@ -38,7 +38,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2026, https://vroncevic.github.io/gen_gtkmm'
 __credits__ = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/vroncevic/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.0.3'
+__version__ = '1.1.9'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -94,18 +94,16 @@ class SubProcessor:
             :exceptions: None.
         '''
         try:
-            current_dir: str = dirname(realpath(__file__))
             output_dir: str = params.get('output')
             project_name: str = params.get('name')
-            gtkmm_version: str = params.get('type', 'gtkmm4')
-            scheme: str = f'{current_dir}/{self._scheme}'
-            templates: str = f'{current_dir}/{self._templates}'
+            scheme: str = f'{dirname(realpath(__file__))}/{self._scheme}'
+            templates: str = f'{dirname(realpath(__file__))}/{self._templates}'
 
             success = self._generator.generate(
                 data=GeneratorData(
                     archive_path=templates,
                     target_dir=output_dir,
-                    template_key=gtkmm_version,
+                    template_key=params.get('type', 'gtkmm4'),
                     scheme=scheme,
                     template_values={
                         'project_name': project_name,
@@ -119,7 +117,7 @@ class SubProcessor:
             if success:
                 self._logger.write_log(INFO, '    Generated files:',)
 
-                for root, dirs, files in walk(output_dir):
+                for root, _, files in walk(output_dir):
                     for file in files:
                         rel_dir = relpath(root, output_dir)
 

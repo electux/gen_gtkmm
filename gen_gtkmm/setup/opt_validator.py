@@ -23,8 +23,9 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 
-from ats_utilities.validation.check_type import istype
+from ats_utilities.exceptions import ATSValueError, ATSTypeError
 from ats_utilities.validation.check_value import not_none
+from ats_utilities.validation.check_type import istype
 
 from gen_gtkmm.setup.options import GenGtkmmBundleOptions
 from gen_gtkmm.setup.keys import GenGtkmmBundleKeys
@@ -33,7 +34,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2026, https://vroncevic.github.io/gen_gtkmm'
 __credits__ = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/vroncevic/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.0.5'
+__version__ = '1.1.9'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -47,6 +48,7 @@ class GenGtkmmBundleOptionsValidator:
 
             :methods:
                 | validate - Validates the gen_gtkmm bundle options.
+                | is_valid - Checks if the gen_gtkmm bundle options is valid.
     '''
 
     @classmethod
@@ -73,3 +75,18 @@ class GenGtkmmBundleOptionsValidator:
             attribute = options.get(attr_name)
 
             istype(attribute, expected_type, ctx, msg_attr_name_istype)
+
+    @classmethod
+    def is_valid(cls, gengtkmmbundleoptions: GenGtkmmBundleOptions) -> bool:
+        '''
+            Checks if the gengtkmmbundleoptions is valid.
+
+            :param gengtkmmbundleoptions: The gengtkmmbundleoptions to be checked.
+            :return: True if valid, False otherwise.
+        '''
+        try:
+            cls.validate(gengtkmmbundleoptions)
+            return True
+
+        except (ATSValueError, ATSTypeError):
+            return False
