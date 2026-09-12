@@ -18,12 +18,13 @@ Copyright
 Info
     Initialization module for the gen_gtkmm.
 '''
+from __future__ import annotations
 
 __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2026, https://vroncevic.github.io/gen_gtkmm'
 __credits__ = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/vroncevic/gen_gtkmm/blob/dev/LICENSE'
-__version__ = '1.1.9'
+__version__ = '1.2.0'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'

@@ -32,4 +32,4 @@ class TestGenGtkmmBundleFactory(unittest.TestCase):
             GenGtkmmBundleFactory.create_bundle(options)
 
     def test_get_version(self) -> None:
-        self.assertEqual(GenGtkmmBundleFactory.get_version(), '1.1.9')
+        self.assertEqual(GenGtkmmBundleFactory.get_version(), '1.2.0')
