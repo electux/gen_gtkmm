@@ -2,12 +2,12 @@ name: gen_gtkmm_python_checker
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master, main ]
     paths:
       - 'gen_gtkmm/**/*.py'
       - 'setup.py'
   pull_request:
-    branches: [ main ]
+    branches: [ master, main ]
     paths:
       - 'gen_gtkmm/**/*.py'
       - 'setup.py'

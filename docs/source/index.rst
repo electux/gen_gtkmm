@@ -9,13 +9,22 @@ The README is used to introduce the tool and provide instructions on
 how to install the tool, any machine dependencies it may have and any
 other information that should be provided before the tool is installed.
 
-|gen_gtkmm python checker| |gen_gtkmm python package| |github issues| |documentation status| |github contributors|
+|gen_gtkmm python checker| |gen_gtkmm python package| |gen_gtkmm interface checker| |gen_gtkmm isp checker| |gen_gtkmm srp checker| |github issues| |documentation status| |github contributors|
 
 .. |gen_gtkmm python checker| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml/badge.svg
    :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml
 
 .. |gen_gtkmm python package| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_package_checker.yml/badge.svg
-   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_package_checker.yml
+   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_package.yml
+
+.. |gen_gtkmm interface checker| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_interface_checker.yml/badge.svg
+   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_interface_checker.yml
+
+.. |gen_gtkmm isp checker| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_isp_checker.yml/badge.svg
+   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_isp_checker.yml
+
+.. |gen_gtkmm srp checker| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_srp_checker.yml/badge.svg
+   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_srp_checker.yml
 
 .. |github issues| image:: https://img.shields.io/github/issues/electux/gen_gtkmm.svg
    :target: https://github.com/electux/gen_gtkmm/issues
@@ -41,19 +50,10 @@ Used next development environment
 .. image:: https://raw.githubusercontent.com/electux/gen_gtkmm/dev/docs/debtux.png
    :alt: debian linux os
 
-|gen_gtkmm python3 build| |gen_gtkmm interface checker| |gen_gtkmm isp checker| |gen_gtkmm srp checker|
+|gen_gtkmm python3 build| 
 
 .. |gen_gtkmm python3 build| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml/badge.svg
    :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml
-
-.. |gen_gtkmm interface checker| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_interface_checker.yml/badge.svg
-   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_interface_checker.yml
-
-.. |gen_gtkmm isp checker| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_isp_checker.yml/badge.svg
-   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_isp_checker.yml
-
-.. |gen_gtkmm srp checker| image:: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_srp_checker.yml/badge.svg
-   :target: https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_srp_checker.yml
 
 Navigate to release `page`_ download and extract release archive.
 

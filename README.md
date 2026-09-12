@@ -10,7 +10,7 @@ The README is used to introduce the tool and provide instructions on
 how to install the tool, any machine dependencies it may have and any
 other information that should be provided before the tool is installed.
 
-[![gen_gtkmm_python_checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml) [![gen_gtkmm_package_checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_package_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_package_checker.yml) [![GitHub issues open](https://img.shields.io/github/issues/electux/gen_gtkmm.svg)](https://github.com/electux/gen_gtkmm/issues) [![GitHub contributors](https://img.shields.io/github/contributors/electux/gen_gtkmm.svg)](https://github.com/electux/gen_gtkmm/graphs/contributors)
+[![gen_gtkmm python checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python_checker.yml) [![gen_gtkmm package checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_package_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_package.yml) [![gen_gtkmm interface checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_interface_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_interface_checker.yml) [![gen_gtkmm isp checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_isp_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_isp_checker.yml) [![gen_gtkmm srp checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_srp_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_srp_checker.yml) [![GitHub issues open](https://img.shields.io/github/issues/electux/gen_gtkmm.svg)](https://github.com/electux/gen_gtkmm/issues) [![Documentation Status](https://readthedocs.org/projects/gen-gtkmm/badge/?version=latest)](https://gen-gtkmm.readthedocs.io/en/latest/?badge=latest) [![GitHub contributors](https://img.shields.io/github/contributors/electux/gen_gtkmm.svg)](https://github.com/electux/gen_gtkmm/graphs/contributors)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -38,7 +38,7 @@ Used next development environment
 
 ![debian linux os](https://raw.githubusercontent.com/electux/gen_gtkmm/dev/docs/debtux.png)
 
-[![gen_gtkmm python3 build](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml) [![gen_gtkmm_interface_checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_interface_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_interface_checker.yml) [![gen_gtkmm_isp_checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_isp_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_isp_checker.yml) [![gen_gtkmm_srp_checker](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_srp_checker.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_srp_checker.yml)
+[![gen_gtkmm python3 build](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml/badge.svg)](https://github.com/electux/gen_gtkmm/actions/workflows/gen_gtkmm_python3_build.yml)
 
 Currently there are four ways to install package
 * Install process based on using pip mechanism
@@ -190,7 +190,7 @@ Tool structure
 
 | Name | Stmts | Miss | Cover |
 |------|-------|------|-------|
-| `gen_gtkmm/__init__.py` | 8 | 0 | 100%|
+| `gen_gtkmm/__init__.py` | 9 | 0 | 100%|
 | `gen_gtkmm/core/__init__.py` | 9 | 0 | 100%|
 | `gen_gtkmm/core/model/__init__.py` | 9 | 0 | 100%|
 | `gen_gtkmm/core/model/project_setup.py` | 14 | 0 | 100%|
@@ -215,21 +215,21 @@ Tool structure
 | `gen_gtkmm/infrastructure/command/__init__.py` | 9 | 0 | 100%|
 | `gen_gtkmm/infrastructure/command/command.py` | 16 | 0 | 100%|
 | `gen_gtkmm/infrastructure/command/gen_gtkmm_command_definition.py` | 24 | 0 | 100%|
-| `gen_gtkmm/infrastructure/command/gen_gtkmm_command_executor.py` | 21 | 0 | 100%|
+| `gen_gtkmm/infrastructure/command/gen_gtkmm_command_executor.py` | 23 | 0 | 100%|
 | `gen_gtkmm/infrastructure/command/icommand_definition.py` | 14 | 0 | 100%|
-| `gen_gtkmm/infrastructure/command/icommand_executor.py` | 13 | 0 | 100%|
+| `gen_gtkmm/infrastructure/command/icommand_executor.py` | 14 | 0 | 100%|
 | `gen_gtkmm/infrastructure/subprocessor.py` | 55 | 0 | 100%|
 | `gen_gtkmm/setup/__init__.py` | 9 | 0 | 100%|
 | `gen_gtkmm/setup/bundle.py` | 23 | 0 | 100%|
 | `gen_gtkmm/setup/dep_validator.py` | 36 | 0 | 100%|
 | `gen_gtkmm/setup/dependencies.py` | 19 | 0 | 100%|
-| `gen_gtkmm/setup/factory.py` | 48 | 0 | 100%|
+| `gen_gtkmm/setup/factory.py` | 49 | 0 | 100%|
 | `gen_gtkmm/setup/keys.py` | 27 | 0 | 100%|
 | `gen_gtkmm/setup/opt_validator.py` | 34 | 0 | 100%|
 | `gen_gtkmm/setup/options.py` | 12 | 0 | 100%|
 | `gen_gtkmm/setup/registry.py` | 32 | 0 | 100%|
 | `gen_gtkmm/setup/validator.py` | 48 | 0 | 100%|
-| **Total** | 927 | 0 | 100% |
+| **Total** | 932 | 0 | 100% |
 
 </details>
 

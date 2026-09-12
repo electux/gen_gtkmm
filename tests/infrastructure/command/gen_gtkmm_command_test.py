@@ -55,3 +55,8 @@ class TestGenGtkmmCommand(unittest.TestCase):
         definition = GenGtkmmCommandDefinition()
         executor = GenGtkmmCommandExecutor(definition)
         self.assertTrue(isinstance(str(executor), str))
+
+    def test_executor_get_definition(self) -> None:
+        definition = GenGtkmmCommandDefinition()
+        executor = GenGtkmmCommandExecutor(definition)
+        self.assertEqual(executor.get_definition(), definition)

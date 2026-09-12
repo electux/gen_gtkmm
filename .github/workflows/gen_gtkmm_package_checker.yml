@@ -1,13 +1,13 @@
 name: gen_gtkmm_package_checker
 on:
   push:
-    branches: [ main ]
+    branches: [ master, main ]
     paths:
       - 'gen_gtkmm/**'
       - 'tests/**'
       - 'setup.py'
   pull_request:
-    branches: [ main ]
+    branches: [ master, main ]
     paths:
       - 'gen_gtkmm/**'
       - 'tests/**'

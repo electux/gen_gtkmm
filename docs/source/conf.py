@@ -29,7 +29,7 @@ path.insert(0, abspath('../../'))
 project: str = 'gen_gtkmm'
 project_copyright: str = '2026, Vladimir Roncevic <elektron.ronca@gmail.com>'
 author: str = 'Vladimir Roncevic <elektron.ronca@gmail.com>'
-version: str = '1.1.9'
+version: str = '1.2.0'
 release: str = 'https://github.com/electux/gen_gtkmm/releases'
 extensions: list[str] = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode']
 templates_path: list[str] = ['_templates']
